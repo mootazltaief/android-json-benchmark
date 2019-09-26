@@ -11,6 +11,7 @@ class JacksonParser(context: Context) {
     private val sample1 = Utils.loadJSONFromAsset(context, "sample1.json")
     private val sample2 = Utils.loadJSONFromAsset(context, "sample2.json")
     private val sample3 = Utils.loadJSONFromAsset(context, "sample3.json")
+    private val sample4 = Utils.loadJSONFromAsset(context, "sample4.json")
 
 
     private val jackson = ObjectMapper()
@@ -26,8 +27,12 @@ class JacksonParser(context: Context) {
         return jackson.readValue(sample2, userCollectionType)
     }
 
-    fun parseSample3(): PhotosJackson{
+    fun parseSample3(): PhotosJackson {
         return jackson.readValue(sample3, PhotosJackson::class.java)
+    }
+
+    fun parseSample4(): UserJackson? {
+        return jackson.readValue(sample4, UserJackson::class.java)
     }
 
 }
