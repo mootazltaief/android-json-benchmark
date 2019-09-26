@@ -31,5 +31,5 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.benchmark:benchmark:1.0.0-alpha02'
+    androidTestImplementation 'androidx.benchmark:benchmark:1.0.0-alpha03'
 }

@@ -47,6 +47,13 @@ class JsonBenchmark {
     }
 
     @Test
+    fun benchmarkGsonWithSample4() {
+        benchmarkRule.measureRepeated {
+            gsonParser.parseSample4()
+        }
+    }
+
+    @Test
     fun benchmarkMoshiWithSample1() {
         benchmarkRule.measureRepeated {
             moshiParser.parseSample1()
@@ -64,6 +71,13 @@ class JsonBenchmark {
     fun benchmarkMoshiWithSample3() {
         benchmarkRule.measureRepeated {
             moshiParser.parseSample3()
+        }
+    }
+
+    @Test
+    fun benchmarkMoshiWithSample4() {
+        benchmarkRule.measureRepeated {
+            moshiParser.parseSample4()
         }
     }
 
@@ -89,6 +103,13 @@ class JsonBenchmark {
     }
 
     @Test
+    fun benchmarkKotlinWithSample4() {
+        benchmarkRule.measureRepeated {
+            kotlinParser.parseSample4()
+        }
+    }
+
+    @Test
     fun benchmarkJacksonWithSample1() {
         benchmarkRule.measureRepeated {
             jacksonParser.parseSample1()
@@ -106,6 +127,13 @@ class JsonBenchmark {
     fun benchmarkJacksonWithSample3() {
         benchmarkRule.measureRepeated {
             jacksonParser.parseSample3()
+        }
+    }
+
+    @Test
+    fun benchmarkJacksonWithSample4() {
+        benchmarkRule.measureRepeated {
+            jacksonParser.parseSample4()
         }
     }
 }

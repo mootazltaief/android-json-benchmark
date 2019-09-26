@@ -14,6 +14,7 @@ class GsonParser(context: Context) {
     private val sample1 = Utils.loadJSONFromAsset(context, "sample1.json")
     private val sample2 = Utils.loadJSONFromAsset(context, "sample2.json")
     private val sample3 = Utils.loadJSONFromAsset(context, "sample3.json")
+    private val sample4 = Utils.loadJSONFromAsset(context, "sample4.json")
 
     private val userTypeToken = object : TypeToken<List<UserGson>>() {}.type
 
@@ -27,5 +28,9 @@ class GsonParser(context: Context) {
 
     fun parseSample3(): PhotosGson {
         return gson.fromJson(sample3, PhotosGson::class.java)
+    }
+
+    fun parseSample4(): UserGson {
+        return gson.fromJson(sample4, UserGson::class.java)
     }
 }
